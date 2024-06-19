@@ -1,4 +1,5 @@
 import { DesktopNavBar } from "@/components/navbar";
+import { DesktopFooter } from "@/components/footer";
 import "./globals.css";
 
 
@@ -13,6 +14,10 @@ export default function RootLayout({
       <body className=''>
         <DesktopNavBar />
         {children}</body>
+
+      {/* <body className=''>
+        <DesktopFooter />
+        {children}</body> */}
     </html>
   );
 }
