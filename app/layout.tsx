@@ -2,8 +2,6 @@ import { DesktopNavBar } from "@/components/navbar";
 import { DesktopFooter } from "@/components/footer";
 import "./globals.css";
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -11,13 +9,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className=''>
+      <body className="">
         <DesktopNavBar />
-        {children}</body>
-
-      {/* <body className=''>
+        {children}
         <DesktopFooter />
-        {children}</body> */}
+      </body>
     </html>
   );
 }
