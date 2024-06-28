@@ -96,42 +96,49 @@ export const DesktopNavBar = () => {
     //   </div>
     // </nav>
 
-    <nav className="bg-slate-400 w-full flex justify-center items-center gap-5 p-2 text-black ">
-      <Link href="/" className="p-5 text-lg">
-        {" "}
-        Home{" "}
-      </Link>
-      <Link href="/" className="p-5 text-lg">
-        {" "}
-        Services{" "}
-      </Link>
-      <Link href="/" className="p-5 text-lg">
-        {" "}
-        About Us{" "}
-      </Link>
-      <div>
-        <Link href="/">
-          <Image
-            src="https://trip-law-new-website.vercel.app/assets/site-logo/trip-law-logo.svg"
-            alt="logo"
-            width={100}
-            height={100}
-            className="cursor-pointer h-14 w-auto"
-          />
-        </Link>
+    <nav className="sticky">
+      <div className="bg-lime-300 w-full h-16"></div>
+      <div className="bg-lime-500 -mt-8 mx-5">
+        <div className="">
+          <Link href="/">
+            <Image
+              src="https://trip-law-new-website.vercel.app/assets/site-logo/trip-law-logo.svg"
+              alt="logo"
+              width={100}
+              height={100}
+              className="cursor-pointer h-10 w-auto px-7 "
+            />
+          </Link>
+        </div>
+        <div className="flex justify-center text-center  max-w-screen-xl mx-auto">
+          <div className="flex gap-5 w-auto justify-center text-center  max-w-screen-xl mx-auto">
+            <Link href="/" className=" ">
+              {" "}
+              Home{" "}
+            </Link>
+            <Link href="/" className=" ">
+              {" "}
+              Services{" "}
+            </Link>
+            <Link href="/" className="">
+              {" "}
+              About Us{" "}
+            </Link>
+            <Link href="/" className=" ">
+              {" "}
+              Appointment{" "}
+            </Link>
+            <Link href="/" className=" ">
+              {" "}
+              Blog{" "}
+            </Link>
+            <Link href="/" className=" ">
+              {" "}
+              Contact Us{" "}
+            </Link>
+          </div>
+        </div>
       </div>
-      <Link href="/" className="p-5 text-lg">
-        {" "}
-        Appointment{" "}
-      </Link>
-      <Link href="/" className="p-5 text-lg">
-        {" "}
-        Blog{" "}
-      </Link>
-      <Link href="/" className="p-5 text-lg">
-        {" "}
-        Contact Us{" "}
-      </Link>
     </nav>
   );
 };
