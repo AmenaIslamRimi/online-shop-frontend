@@ -1,7 +1,6 @@
 const Home = () => {
   return (
     <div>
-      <h1 className="text-slate-950">Home</h1>
       <div className=" max-w-screen-xl  mx-auto my-3 grid grid-cols-3 gap-5 ">
         <div className="bg-lime-200 rounded-full shadow-md h-96 w-full col-span-2 hover:bg-teal-200">
           {/* <p>
