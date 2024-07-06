@@ -96,11 +96,11 @@ export const DesktopNavBar = () => {
     //   </div>
     // </nav>
 
-    <nav className="sticky">
+    <nav className="sticky top-0 z-50">
       <div className="bg-blue-500 w-full h-16"></div>
-      <div className="bg-gray-50 rounded-xl shadow-md -mt-8 mx-5">
+      <div className="bg-gray-50 rounded-xl shadow-md -mt-8 mx-5 ">
         <div className="flex justify-between items-center px-3 py-3 ">
-          <Link href="/">
+          <Link href="/" className="flex-1">
             <Image
               src="/super_shop_logo.png"
               alt="logo"
@@ -109,54 +109,47 @@ export const DesktopNavBar = () => {
               className=" cursor-pointer h-10 w-auto "
             />
           </Link>
-          <div className="flex gap-5 w-auto justify-center text-center  max-w-screen-xl mx-auto">
+          <div className="flex flex-[2] gap-5 w-auto justify-center text-center  max-w-screen-xl mx-auto">
             <Link href="/" className=" ">
-              {" "}
-              Home{" "}
+              Home
             </Link>
             <Link href="/" className=" ">
-              {" "}
-              Services{" "}
+              Services
             </Link>
             <Link href="/" className="">
-              {" "}
-              About Us{" "}
+              About Us
             </Link>
             <Link href="/" className=" ">
-              {" "}
-              Appointment{" "}
+              Appointment
             </Link>
             <Link href="/" className=" ">
-              {" "}
-              Blog{" "}
+              Blog
             </Link>
             <Link href="/" className=" ">
-              {" "}
-              Contact Us{" "}
+              Contact Us
             </Link>
           </div>
-          <div className="flex justify-center items-center gap-3 relative">
-            <div className="flex justify-center items-center border rounded-l-md border-gray-300 bg-white p-0">
+          <div className="flex flex-1 justify-end items-center gap-3 relative">
+            <div className="absolute right-20 flex justify-center items-center border rounded-l-md border-gray-300 bg-white p-0">
               <input
                 type="text"
-                className=" m-0 active:bg-red-200 focus:bg-blue-200 hover:bg-green-200 focus:outline-none focus:bg-transparent focus:border-transparent active:bg-transparent hover:bg-transparent"
+                className="p-1 m-0 active:bg-red-200 focus:bg-blue-200 hover:bg-green-200 focus:outline-none focus:bg-transparent focus:border-transparent active:bg-transparent hover:bg-transparent bg-transparent"
                 placeholder="Search....."
               />
-
-              <button className="text-white border-none bg-blue-500 p-0 m-0">
+              <button className="text-white border bg-gray-100 p-0 m-0 shadow">
                 <svg
-                  className="w-7 h-7 "
+                  className="w-8 h-8"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
                     d="M10.77 18.3C9.2807 18.3 7.82485 17.8584 6.58655 17.031C5.34825 16.2036 4.38311 15.0275 3.81318 13.6516C3.24325 12.2757 3.09413 10.7616 3.38468 9.30096C3.67523 7.84029 4.39239 6.49857 5.44548 5.44548C6.49857 4.39239 7.84029 3.67523 9.30096 3.38468C10.7616 3.09413 12.2757 3.24325 13.6516 3.81318C15.0275 4.38311 16.2036 5.34825 17.031 6.58655C17.8584 7.82485 18.3 9.2807 18.3 10.77C18.3 11.7588 18.1052 12.738 17.7268 13.6516C17.3484 14.5652 16.7937 15.3953 16.0945 16.0945C15.3953 16.7937 14.5652 17.3484 13.6516 17.7268C12.738 18.1052 11.7588 18.3 10.77 18.3ZM10.77 4.74999C9.58331 4.74999 8.42327 5.10189 7.43657 5.76118C6.44988 6.42046 5.68084 7.35754 5.22672 8.45389C4.77259 9.55025 4.65377 10.7566 4.88528 11.9205C5.11679 13.0844 5.68824 14.1535 6.52735 14.9926C7.36647 15.8317 8.43556 16.4032 9.59945 16.6347C10.7633 16.8662 11.9697 16.7474 13.0661 16.2933C14.1624 15.8391 15.0995 15.0701 15.7588 14.0834C16.4181 13.0967 16.77 11.9367 16.77 10.75C16.77 9.15869 16.1379 7.63257 15.0126 6.50735C13.8874 5.38213 12.3613 4.74999 10.77 4.74999Z"
-                    fill="#000000"
+                    fill="#000"
                   />
                   <path
                     d="M20 20.75C19.9015 20.7504 19.8038 20.7312 19.7128 20.6934C19.6218 20.6557 19.5392 20.6001 19.47 20.53L15.34 16.4C15.2075 16.2578 15.1354 16.0697 15.1388 15.8754C15.1422 15.6811 15.221 15.4958 15.3584 15.3583C15.4958 15.2209 15.6812 15.1422 15.8755 15.1388C16.0698 15.1354 16.2578 15.2075 16.4 15.34L20.53 19.47C20.6704 19.6106 20.7493 19.8012 20.7493 20C20.7493 20.1987 20.6704 20.3893 20.53 20.53C20.4608 20.6001 20.3782 20.6557 20.2872 20.6934C20.1962 20.7312 20.0985 20.7504 20 20.75Z"
-                    fill="#000000"
+                    fill="#000"
                   />
                 </svg>
               </button>
