@@ -1,10 +1,22 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
+
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+// import required modules
+import { Pagination } from "swiper/modules";
 
 const Home = () => {
   return (
     <div>
-      <div className="w-full h-auto relative -z-10 -mt-8 bannar_image">
+      <div className="w-full h-auto relative -z-10 -mt-8 body_image">
         <div className="background absolute justify-start items-start inset-y-0 left-0 top-20 "></div>
 
         <div className="content flex flex-col h-full justify-center ">
@@ -21,91 +33,133 @@ const Home = () => {
           </button>
         </div>
       </div>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          Slide 1
+          <Image
+            src="/grocery_image_1.jpeg"
+            alt="Picture of the author"
+            width={500}
+            height={500}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          Slide 2
+          <Image
+            src="/grocery_image_1.jpeg"
+            alt="Picture of the author"
+            width={500}
+            height={500}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          Slide 3
+          <Image
+            src="/grocery_image_1.jpeg"
+            alt="Picture of the author"
+            width={500}
+            height={500}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          Slide 4
+          <Image
+            src="/grocery_image_1.jpeg"
+            alt="Picture of the author"
+            width={500}
+            height={500}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          Slide 5
+          <Image
+            src="/grocery_image_1.jpeg"
+            alt="Picture of the author"
+            width={500}
+            height={500}
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          Slide 6
+          <Image
+            src="/grocery_image_1.jpeg"
+            alt="Picture of the author"
+            width={500}
+            height={500}
+          />
+        </SwiperSlide>
+      </Swiper>
 
       <div className=" max-w-screen-xl mx-auto my-5 grid grid-cols-3 gap-5">
-        <div className="bg-lime-200 rounded-lg shadow-md h-full w-full col-span-1 ">
-          <Link href="/">
-            <Image
-              src="/grocery_image_1.jpeg"
-              alt="grocery"
-              height={300}
-              width={700}
-              className="w-full h-full object-cover"
-            />
-          </Link>
-          <div className="relative justify-center items-center bottom-[43rem]">
-            <h4 className="text-xl font-bold text-center  ">
+        <div className="rounded-lg shadow-md col-span-1 grocery_image_1">
+          <div className="background1 "></div>
+          <div className="content1 flex flex-col gap-2 justify-center items-center h-full">
+            <h4 className="text-xl font-bold text-center text-white ">
               We Supply 100% Fresh
             </h4>
-            <h2 className="text-2xl font-bold text-center ">
+            <h2 className="text-2xl font-bold text-center text-white">
               Organic Healthy Foods
             </h2>
-            <button className="bg-transparent hover:bg-blue-700 text-black font-bold py-2 px-2 rounded mx-60">
-              Shop Now
+            <button className="bg-transparent text-white font-bold py-2 px-2 rounded mx-30">
+              <u>Shop Now</u>
             </button>
           </div>
         </div>
-        <div className="grid col-span-2 grid-cols-2 gap-5">
-          <div className="bg-lime-200 rounded-lg shadow-md h-full w-full">
-            <Link href="/">
-              <Image
-                src="/grocery_image_2.jpeg"
-                alt="grocery"
-                height={300}
-                width={700}
-                className="w-full h-full object-cover"
-              />
-            </Link>
-          </div>
-          <div className="bg-lime-200 rounded-lg shadow-md h-full w-full col-span-1 ">
-            <Link href="/">
-              <Image
-                src="/grocery_image_3.jpg"
-                alt="grocery"
-                height={300}
-                width={700}
-                className="w-full h-full object-cover"
-              />
-            </Link>
 
-            {/* <div className="relative justify-center items-center bottom-[43rem]">
-              <h4 className="text-xl font-bold text-center  ">
+        <div className=" grid grid-cols-2 col-span-2 gap-5">
+          <div className=" rounded-lg shadow-md col-span-1 grocery_image_2">
+            <div className="background2 "></div>
+            <div className="content2 flex flex-col gap-2 justify-center items-center h-full">
+              <h4 className="text-xl font-bold text-center text-white ">
                 We Supply 100% Fresh
               </h4>
-              <h2 className="text-2xl font-bold text-center ">
+              <h2 className="text-2xl font-bold text-center text-white">
                 Organic Healthy Foods
               </h2>
-              <button className="bg-transparent hover:bg-blue-700 text-black font-bold py-2 px-2 rounded mx-60">
-                Shop Now
+              <button className="bg-transparent text-white font-bold py-2 px-2 rounded mx-30">
+                <u>Shop Now</u>
               </button>
-            </div> */}
+            </div>
           </div>
-          <div className="bg-lime-200 rounded-lg col-span-2 shadow-md h-full w-full col-span-2">
-            <Link href="/">
-              <Image
-                src="/grocery_image_4.jpg"
-                alt="grocery"
-                height={300}
-                width={700}
-                className="w-full h-full object-cover"
-              />
-            </Link>
 
-            {/* <div className="relative justify-center items-center bottom-[43rem]">
-              <h4 className="text-xl font-bold text-center  ">
+          <div className="rounded-lg shadow-md col-span-1 grocery_image_3">
+            <div className="background3 "></div>
+            <div className="content3 flex flex-col gap-2 justify-center items-center h-full">
+              <h4 className="text-xl font-bold text-center text-white ">
                 We Supply 100% Fresh
               </h4>
-              <h2 className="text-2xl font-bold text-center ">
+              <h2 className="text-2xl font-bold text-center text-white">
                 Organic Healthy Foods
               </h2>
-              <button className="bg-transparent hover:bg-blue-700 text-black font-bold py-2 px-2 rounded mx-60">
-                Shop Now
+              <button className="bg-transparent text-white font-bold py-2 px-2 rounded mx-30">
+                <u>Shop Now</u>
               </button>
-            </div> */}
+            </div>
+          </div>
+          <div className="rounded-lg shadow-md col-span-2 grocery_image_4">
+            <div className="background4 "></div>
+            <div className="content4 flex flex-col gap-2 justify-center items-center h-full">
+              <h4 className="text-xl font-bold text-center text-white ">
+                We Supply 100% Fresh
+              </h4>
+              <h2 className="text-2xl font-bold text-center text-white">
+                Organic Healthy Foods
+              </h2>
+              <button className="bg-transparent text-white font-bold py-2 px-2 rounded mx-30">
+                <u>Shop Now</u>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   );
 };
