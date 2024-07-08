@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Pagination } from "swiper/modules";
+import { VerticalCard } from "@/components/card";
 
 const Home = () => {
   return (
@@ -97,6 +98,40 @@ const Home = () => {
           />
         </SwiperSlide>
       </Swiper>
+      <div className="flex max-w-screen-xl mx-auto my-16 gap-5">
+        {Array.from({ length: 3 }).map((_, index) => (
+          <div
+            key={index}
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            data-aos-delay="0"
+            className="aos-init aos-animate"
+          >
+            <div className="bg-slate-50 border rounded-lg shadow-lg p-5 transition-transform duration-300 hover:scale-105">
+              <div className=" p-0">
+                <Image
+                  src="/grocery_image_1.jpeg"
+                  alt="Picture of the author"
+                  width={500}
+                  height={500}
+                />
+              </div>
+              <div className="text-small block text-left mt-4">
+                <h2 className="text-default-500 text-lg font-bold line-clamp-1 mb-2">
+                  Consolidating Child Related Benefits in Taxes, Is Your Child
+                  Missing Out on FREE Money?
+                </h2>
+                <button
+                  className="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap subpixel-antialiased overflow-hidden tap-highlight-transparent data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 min-w-20 h-10 gap-2 rounded-small [&amp;>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none data-[hover=true]:opacity-hover bg-[#0E758B] text-white shadow-lg font-medium text-lg px-5 py-4 mb-2"
+                  type="button"
+                >
+                  Read More
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
 
       <div className=" max-w-screen-xl mx-auto my-5 grid grid-cols-3 gap-5">
         <div className="rounded-lg shadow-md col-span-1 grocery_image_1">
@@ -160,6 +195,23 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <div>
+        <div className="max-w-screen-xl mx-auto my-16">
+          <h1 className="text-4xl font-bold text-center my-5">Our Products</h1>
+          <div className="grid grid-cols-4 gap-5">
+            <VerticalCard />
+            <VerticalCard />
+            <VerticalCard />
+            <VerticalCard />
+            <VerticalCard />
+            <VerticalCard />
+            <VerticalCard />
+            <VerticalCard />
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };

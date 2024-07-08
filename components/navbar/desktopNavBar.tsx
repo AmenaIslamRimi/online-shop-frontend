@@ -110,23 +110,20 @@ export const DesktopNavBar = () => {
             />
           </Link>
           <div className="flex flex-[2] gap-5 w-auto justify-center text-center  max-w-screen-xl mx-auto">
-            <Link href="/" className=" ">
-              Home
+            <Link href="/shop" className=" ">
+              Shop
             </Link>
-            <Link href="/" className=" ">
-              Services
+            <Link href="/best-product" className=" ">
+              Best Product
             </Link>
-            <Link href="/" className="">
+            <Link href="/latest" className="">
+              Latest
+            </Link>
+            <Link href="/about-us" className=" ">
               About Us
             </Link>
-            <Link href="/" className=" ">
-              Appointment
-            </Link>
-            <Link href="/" className=" ">
+            <Link href="/blog" className=" ">
               Blog
-            </Link>
-            <Link href="/" className=" ">
-              Contact Us
             </Link>
           </div>
           <div className="flex flex-1 justify-end items-center gap-3 relative">
