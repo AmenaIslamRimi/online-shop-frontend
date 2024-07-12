@@ -4,7 +4,7 @@ export const VerticalCard = () => {
   return (
     <>
       <div>
-        <div className="card border border-gray-400 ">
+        <div className="card border border-gray-400 rounded-lg">
           <div className="card-image">
             <img src="/avocado.jpg" alt="avocado" />
           </div>
