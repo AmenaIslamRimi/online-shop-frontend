@@ -1,14 +1,69 @@
 "use client";
 import React, { useState } from "react";
 import { VerticalCard } from "@/components/card/verticalCard";
+import { ProductsType } from "@/types/productsType";
 
 const Shop = () => {
-  // const [products, setProducts] = useState();
-
-  // const getValues = (Event: any) => {
-  //   console.log(Event.target.value);
-  //   setProducts(Event.target.value);
-  // };
+  const [products, setProducts] = useState<ProductsType[]>([
+    {
+      name: "Avocado",
+      price: 2.5,
+      image: "/avocado.jpg",
+      weight: ["5kg", "10kg"],
+      quantity: 1,
+    },
+    {
+      name: "Apple",
+      price: 1.5,
+      image: "/apple.jpg",
+       weight: ["5kg", "10kg"],
+      quantity: 1,
+    },
+    {
+      name: "Banana",
+      price: 1.5,
+      image: "/banana.jpg",
+       weight: ["5kg", "10kg"],
+      quantity: 1,
+    },
+    {
+      name: "Grapes",
+      price: 2.5,
+      image: "/grapes.jpg",
+       weight: ["5kg", "10kg"],
+      quantity: 1,
+    },
+    {
+      name: "Orange",
+      price: 1.5,
+      image: "/orange.jpg",
+       weight: ["5kg", "10kg"],
+      quantity: 1,
+    },
+    {
+      name: "Pineapple",
+      price: 2.5,
+      image: "/pineapple.jpg",
+       weight: ["5kg", "10kg"],
+      quantity: 1,
+    },
+    {
+      name: "Strawberry",
+      price: 1.5,
+      image: "/strawberry.jpg",
+       weight: ["5kg", "10kg"],
+      quantity: 1,
+    },
+    {
+      name: "Watermelon",
+      price: 2.5,
+      image: "/watermelon.jpg",
+       weight: ["5kg", "10kg"],
+      quantity: 1,
+    },
+  ]);
+  
+ 
   return (
     <>
       <section className="max-w-screen-xl mx-auto w-auto  border-l-4 border-teal-100 bg-slate-50 rounded-md shadow my-5 py-3 pl-4 justify-start items-center flex">
@@ -207,7 +262,7 @@ const Shop = () => {
                 </svg>
               </button>
             </div>
-            <div className="flex justify-end items-center ml-80">
+            <div className="flex justify-end items-center ml-96">
               <h2 className="text-lg font-semibold">
                 <span>8 Products</span>
               </h2>
@@ -235,14 +290,9 @@ const Shop = () => {
 
           <div className="max-w-screen-lg mx-auto w-auto rounded-md shadow my-5 justify-between items-center">
             <div className="grid grid-cols-3 gap-5">
-              <VerticalCard />
-              <VerticalCard />
-              <VerticalCard />
-              <VerticalCard />
-              <VerticalCard />
-              <VerticalCard />
-              <VerticalCard />
-              <VerticalCard />
+              {products.map((item, index) => (
+                <VerticalCard {...item} key={index} />
+              ))}
             </div>
           </div>
         </div>
