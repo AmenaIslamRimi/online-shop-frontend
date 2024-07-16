@@ -2,14 +2,14 @@ import Image from "next/image";
 
 export const DesktopFooter = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="bg-white dark:bg-gray-100">
       <div className="w-full ">
-        <div className="mx-auto text-center grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4 max-w-screen-xl">
+        <div className="mx-auto justify-between flex gap-8  py-6 lg:py-8 md:grid-cols-4 max-w-screen-xl">
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-gray-900">
               Company
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <ul className="text-gray-500 dark:text-gray-900 font-medium ">
               <li className="mb-4">
                 <a href="#" className=" hover:underline">
                   About
@@ -33,10 +33,10 @@ export const DesktopFooter = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-gray-900">
               Help center
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <ul className="text-gray-500 dark:text-gray-900 font-medium">
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   Discord Server
@@ -60,10 +60,10 @@ export const DesktopFooter = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-gray-900">
               Legal
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <ul className="text-gray-500 dark:text-gray-900 font-medium">
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   Privacy Policy
@@ -82,10 +82,10 @@ export const DesktopFooter = () => {
             </ul>
           </div>
           <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+            <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-gray-900">
               Download
             </h2>
-            <ul className="text-gray-500 dark:text-gray-400 font-medium">
+            <ul className="text-gray-500 dark:text-gray-900 font-medium">
               <li className="mb-4">
                 <a href="#" className="hover:underline">
                   iOS

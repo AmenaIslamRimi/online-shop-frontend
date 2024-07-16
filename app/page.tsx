@@ -200,18 +200,37 @@ const Home = () => {
         <div className="max-w-screen-xl mx-auto my-16">
           <h1 className="text-4xl font-bold text-center my-5">Our Products</h1>
           <div className="grid grid-cols-4 gap-5">
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
-            <VerticalCard />
+            <VerticalCard
+              name="Avocado"
+              price={5.0}
+              image="/avocado.jpg"
+              weight={["5kg", "10kg"]}
+              quantity={1}
+            />
+            <VerticalCard
+              name="Banana"
+              price={2.0}
+              image="/banana.jpg"
+              weight={["5kg", "10kg"]}
+              quantity={1}
+            />
+            <VerticalCard
+              name="Apple"
+              price={3.0}
+              image="/apple.jpg"
+              weight={["5kg", "10kg"]}
+              quantity={1}
+            />
+            <VerticalCard
+              name="Orange"
+              price={4.0}
+              image="/orange.jpg"
+              weight={["5kg", "10kg"]}
+              quantity={1}
+            />
           </div>
         </div>
       </div>
-
     </div>
   );
 };

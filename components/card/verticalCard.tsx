@@ -2,6 +2,7 @@ import React from "react";
 // I have props name as item with it has fields name, price, image, weight, quantity
 import { ProductsType } from "@/types/productsType";
 import Image from "next/image";
+import { Weight } from "./Weight";
 
 export const VerticalCard = ({
   name,
@@ -45,12 +46,9 @@ export const VerticalCard = ({
           <span className="text-sm text-orange-600">.00</span>
         </p>
         <div className="flex justify-start items-center box-border w-3 gap-2">
-          <button className="flex border-[1px] shadow-sm bg-teal-100 text-teal-800 font-medium mx-auto my-3 px-2 py-1 rounded-md items-center focus:outline-none focus:border-sky-500">
-            {weight[0]}
-          </button>
-          <button className="flex border-[1px] shadow-sm bg-orange-100 text-orange-800 font-medium mx-auto my-3 px-2 py-1 rounded-md items-center focus:outline-none focus:border-yellow-500">
-            {weight[1]}
-          </button>
+          {weight.map((item, index) => (
+            <Weight key={index} weight={item} />
+          ))}
         </div>
         <div className="flex justify-between items-center gap-2 relative">
           <div className="grid grid-cols-2 justify-between items-center rounded-md bg-orange-50 p-1 shadow-sm border w-20">
